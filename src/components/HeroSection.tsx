@@ -16,43 +16,70 @@ export default function HeroSection() {
       <ThreeScene />
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <motion.span 
-              className="inline-block px-4 py-2 rounded-full glass text-sm font-medium text-primary mb-6"
-              initial={{ opacity: 0, scale: 0.8 }}
+        <div className="max-w-5xl mx-auto text-center">
+          
+          {/* Wrapper utama untuk Foto dan Teks */}
+          <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 mb-10">
+            
+            {/* Bagian Foto Profil */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.2 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="relative"
             >
-              👋 Selamat datang di portfolio saya
-            </motion.span>
-          </motion.div>
+              <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-primary/20 shadow-glow relative z-10">
+                <img 
+                  src="/fotofathan.jpg" // Ganti dengan path foto kamu di folder public
+                  alt="Profile"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              {/* Dekorasi lingkaran di belakang foto */}
+              <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full -z-10 animate-pulse"></div>
+            </motion.div>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="font-display text-4xl md:text-6xl lg:text-7xl font-bold mb-6"
-          >
-            Fullstack Developer
-            <br />
-            <span className="text-gradient">&amp; Content Creator</span>
-          </motion.h1>
+            {/* Bagian Teks */}
+            <div className="text-center md:text-left">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+              >
+                <motion.span 
+                  className="inline-block px-4 py-2 rounded-full glass text-sm font-medium text-primary mb-6"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 0.2 }}
+                >
+                  👋 Selamat datang di portfolio saya
+                </motion.span>
+              </motion.div>
 
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto"
-          >
-            Saya membangun aplikasi web yang indah dan fungsional, 
-            serta membagikan pengetahuan melalui konten yang inspiratif.
-          </motion.p>
+              <motion.h1
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                className="font-display text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
+              >
+                Hi I'M
+                <br />
+                <span className="text-gradient">fathan al zahran</span>
+              </motion.h1>
 
+              <motion.p
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.5 }}
+                className="text-lg md:text-xl text-muted-foreground mb-8 max-w-xl"
+              >
+                Saya adalah siswa dari MAN 1 Banda Aceh yang berasal dari kelas X-11
+                persiapan kedinasan. Senang mengeksplorasi teknologi dan kreativitas digital.
+              </motion.p>
+            </div>
+          </div>
+
+          {/* Bagian Tombol Aksi */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -82,6 +109,7 @@ export default function HeroSection() {
             </Button>
           </motion.div>
 
+          {/* Social Icons */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -89,14 +117,15 @@ export default function HeroSection() {
             className="flex items-center justify-center gap-6"
           >
             {[
-              { icon: Github, href: '#', label: 'GitHub' },
-              { icon: Linkedin, href: '#', label: 'LinkedIn' },
-              { icon: Youtube, href: '#', label: 'YouTube' },
-              { icon: Instagram, href: '#', label: 'Instagram' },
+              { icon: Github, href: 'https://github.com/alimtiazii/kocak-epep.git', label: 'GitHub' },
+              // { icon: Linkedin, href: '#', label: 'LinkedIn' },
+              // { icon: Youtube, href: '#', label: 'YouTube' },
+              // { icon: Instagram, href: '#', label: 'Instagram' },
             ].map((social) => (
               <motion.a
                 key={social.label}
                 href={social.href}
+                target="_blank"
                 className="p-3 rounded-full glass hover:shadow-glow transition-all duration-300"
                 whileHover={{ scale: 1.1, y: -2 }}
                 whileTap={{ scale: 0.95 }}
