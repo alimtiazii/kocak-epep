@@ -2,11 +2,9 @@ import { motion } from 'framer-motion';
 
 const skills = {
   frontend: [
-    { name: 'React', level: 95 },
-    { name: 'TypeScript', level: 90 },
-    { name: 'Next.js', level: 88 },
-    { name: 'Tailwind CSS', level: 95 },
-    { name: 'Vue.js', level: 75 },
+    { name: 'sosiologi', level: 95 },
+    { name: 'geografi', level: 90 },
+    { name: 'ekonomi', level: 88 },
   ],
   backend: [
     { name: 'Node.js', level: 90 },
@@ -79,9 +77,9 @@ export default function SkillsSection() {
           >
             <div className="flex items-center gap-3 mb-6">
               <div className="p-3 rounded-xl bg-primary/10">
-                <span className="text-2xl">🎨</span>
+                <span className="text-2xl">📗</span>
               </div>
-              <h3 className="font-display text-xl font-bold">Frontend</h3>
+              <h3 className="font-display text-xl font-bold">IPS</h3>
             </div>
             <div className="space-y-4">
               {skills.frontend.map((skill, index) => (
