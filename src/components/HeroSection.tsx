@@ -119,7 +119,7 @@ export default function HeroSection() {
             {[
               { icon: Github, href: 'https://github.com/alimtiazii/kocak-epep.git', label: 'GitHub' },
               // { icon: Linkedin, href: '#', label: 'LinkedIn' },
-              // { icon: Youtube, href: '#', label: 'YouTube' },
+              { icon: Youtube, href: 'https://www.youtube.com/', label: 'YouTube' },
               // { icon: Instagram, href: '#', label: 'Instagram' },
             ].map((social) => (
               <motion.a

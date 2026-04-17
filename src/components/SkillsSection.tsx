@@ -9,7 +9,7 @@ const skills = {
   backend: [
     { name: 'kimia', level: 90 },
     { name: 'biologi', level: 85 },
-    { name: 'fisika', level: 88 },,
+    { name: 'fisika', level: 88 },
   ],
   tools: [
     { name: 'B.Arab', level: 95 },
